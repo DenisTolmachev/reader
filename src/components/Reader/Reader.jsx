@@ -20,6 +20,19 @@ export class Reader extends Component {
     this.setState({ index: this.state.index + value });
   };
 
+  componentDidMount() {
+    const savedState = localStorage.getItem('readerState');
+    if (savedState) {
+      this.setState({index: Number(savedState)});
+    }
+  }
+
+  componentDidUpdate(_, prevState) {
+    if (prevState.index !== this.state.index) {
+      localStorage.setItem('readerState', this.state.index);
+    }
+  }
+
   render() {
     const { index } = this.state;
     const { data } = this.props;
