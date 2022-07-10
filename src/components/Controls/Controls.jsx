@@ -1,9 +1,18 @@
 import styled from "styled-components";
 
 const Button = styled.button`
-    margin: 5px;
-    padding: 5px;
-`
+    padding: 5px 10px;
+margin: 5px 10px;
+font-size: 14px;
+text-transform: capitalize;
+background-color: burlywood;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+:hover {
+  background-color: gainsboro;
+}
+`;
 
 export const Controls = ({current, total, onChange}) => {
   return (

@@ -5,6 +5,7 @@ import { Component } from 'react';
 import styled from 'styled-components'
 
 const ReaderContainer = styled.div`
+background-color: beige;
   width: 60%;
   margin: 0 auto;
   margin-top: 50px;
